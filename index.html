@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>아이코그램 로그인 안내</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .banner {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .banner img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px; /* 간격을 넓게 설정 */
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .login-section {
+      width: 100%;
+      text-align: center;
+      padding: 30px 0;
+    }
+    .login-section h3 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 30px; /* 간격을 좀 더 넓게 설정 */
+    }
+    .login-section input {
+      width: 80%;
+      padding: 15px;
+      margin-bottom: 20px; /* 입력 필드와 버튼 간 간격 넓게 설정 */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .copy-btn {
+      padding: 15px; /* 버튼을 크게 설정 */
+      width: 80%; /* 버튼 너비 크게 설정 */
+      background-color: #606060; /* 진한 회색 */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 20px; /* 버튼 간 간격 넓게 설정 */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+    .copy-btn:hover {
+      background-color: #505050;
+    }
+    .instruction {
+      font-size: 18px;
+      color: #555;
+      margin-top: 30px;
+    }
+    .instruction a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .instruction a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 배너 이미지 -->
+  <div class="banner">
+    <img src="https://circular-efraasia-b65.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fe7dfe27c-07fb-479f-9c2f-9f5e2e5e51cd%2F17d6370d-7166-4a58-8253-c761260c1b1f%2F11.png?table=block&id=1153a1fc-323a-80c1-a549-f9af14fc4a71&spaceId=e7dfe27c-07fb-479f-9c2f-9f5e2e5e51cd&width=2000&userId=&cache=v2" alt="배너 이미지">
+  </div>
+
+  <div class="container">
+    <!-- 로그인 정보 섹션 -->
+    <div class="login-section">
+      <h3>아이코그램 로그인 정보</h3>
+      <label for="id">아이디:</label>
+      <input type="text" id="id" value="gusalswn123@naver.com" readonly>
+      <button class="copy-btn" onclick="copyText('gusalswn123@naver.com')">복사</button>
+      <br>
+      <label for="password">비밀번호:</label>
+      <input type="text" id="password" value="Jejuisland!24" readonly>
+      <button class="copy-btn" onclick="copyText('Jejuisland!24')">복사</button>
+    </div>
+
+    <!-- 안내 문구 -->
+    <div class="instruction">
+      <p><a href="https://icograms.com/" target="_blank">여기</a>를 눌러 로그인페이지로 이동한 후, "SIGN IN" 을 눌러 로그인을 진행해주세요!</p>
+    </div>
+  </div>
+
+  <script>
+    function copyText(value) {
+      const tempInput = document.createElement('input');
+      tempInput.value = value;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      alert("복사되었습니다.");
+    }
+  </script>
+
+</body>
+</html>
